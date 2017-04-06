@@ -32,7 +32,7 @@ static NSString *const kIsShowCoverGuideView = @"kIsShowCoverGuideView";
         ZYMaskView *maskView = [[ZYMaskView alloc] initWithFrame:[UIScreen mainScreen].bounds
                                                                                showClearFrame:clearRect];
         [maskView showMaskView];
-    }
+    }else {}
 }
 
 #pragma mark - Public Methods
@@ -42,7 +42,7 @@ static NSString *const kIsShowCoverGuideView = @"kIsShowCoverGuideView";
     
     if (!self.superview) {
         [[UIApplication sharedApplication].delegate.window addSubview:self];
-    }
+    }else {}
 }
 
 - (void)hidenMaskView
@@ -54,7 +54,7 @@ static NSString *const kIsShowCoverGuideView = @"kIsShowCoverGuideView";
         } completion:^(BOOL finished) {
             [self removeFromSuperview];
         }];
-    }
+    } else {}
 }
 
 #pragma mark - Life Cycle
